@@ -20,3 +20,7 @@ mono_crash.*.json
 # other
 build/
 builds/
+
+*.uid
+*.import
+/addons/
