@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://uoqprplo7rai"]
+
+[ext_resource type="Script" uid="uid://e8mkn256piix" path="res://examples/cursors/cursors.gd" id="1_w1uug"]
+[ext_resource type="Script" uid="uid://d2o2x3bq5opf1" path="res://addons/GreenHeatGD/GreenHeat.gd" id="2_xoqk0"]
+[ext_resource type="PackedScene" uid="uid://c6b8nf8unmbci" path="res://examples/cursors/cursor.tscn" id="3_xoqk0"]
+
+[node name="cursors" type="Node2D" unique_id=1189497450 node_paths=PackedStringArray("greenHeat")]
+script = ExtResource("1_w1uug")
+greenHeat = NodePath("GreenHeat")
+cursorScene = ExtResource("3_xoqk0")
+
+[node name="GreenHeat" type="Node" parent="." unique_id=1069208985]
+script = ExtResource("2_xoqk0")
+channel_name = "venorrak"
+metadata/_custom_type_script = "uid://d2o2x3bq5opf1"

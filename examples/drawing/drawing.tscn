@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://cscftuvmvmhaf"]
+
+[ext_resource type="Script" uid="uid://cxvbadjbrgx7s" path="res://examples/drawing/colorPicker.gd" id="1_ecxxu"]
+[ext_resource type="Script" uid="uid://b0uu4h864t05h" path="res://examples/drawing/canvas.gd" id="1_t81ty"]
+[ext_resource type="Script" uid="uid://d2o2x3bq5opf1" path="res://addons/GreenHeatGD/GreenHeat.gd" id="3_r16to"]
+
+[node name="drawing" type="Node2D" unique_id=1670835999]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=292827115]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="colors" type="VBoxContainer" parent="HBoxContainer" unique_id=1040299737]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/colors" unique_id=543351056]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+script = ExtResource("1_ecxxu")
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer/colors" unique_id=122832817]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_ecxxu")
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer/colors" unique_id=994795010]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(1, 0, 0, 1)
+script = ExtResource("1_ecxxu")
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer/colors" unique_id=1347060286]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 1, 0, 1)
+script = ExtResource("1_ecxxu")
+
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer/colors" unique_id=1971983284]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+color = Color(0, 0, 1, 1)
+script = ExtResource("1_ecxxu")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=226658634]
+layout_mode = 2
+
+[node name="canvas" type="TextureRect" parent="HBoxContainer/PanelContainer" unique_id=385882160 node_paths=PackedStringArray("colorPickers")]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+script = ExtResource("1_t81ty")
+colorPickers = [NodePath("../../colors/ColorRect"), NodePath("../../colors/ColorRect2"), NodePath("../../colors/ColorRect3"), NodePath("../../colors/ColorRect4"), NodePath("../../colors/ColorRect5")]
+defaultColor = Color(1, 1, 1, 1)
+
+[node name="GreenHeat" type="Node" parent="." unique_id=349180808]
+script = ExtResource("3_r16to")
+simulating_input = true
+channel_name = "venorrak"
+metadata/_custom_type_script = "uid://d2o2x3bq5opf1"
