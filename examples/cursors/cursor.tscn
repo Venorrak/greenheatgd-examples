@@ -17,19 +17,22 @@ emission_shape_offset = Vector3(15.152, 112.837, 0)
 emission_shape_scale = Vector3(55.618, 1, 1)
 emission_shape = 1
 emission_sphere_radius = 1.0
-angle_min = -221.9
-angle_max = 91.40001
-gravity = Vector3(0, 15.071, 0)
-radial_accel_min = -39.190002
-radial_accel_max = 31.729998
-scale_min = 7.0
-scale_max = 7.0
+angle_min = -720.0
+angle_max = 720.0
+direction = Vector3(0, 1, 0)
+spread = 24.353
+initial_velocity_min = 44.77
+initial_velocity_max = 44.77
+gravity = Vector3(0, 0, 0)
+scale_min = 6.66
+scale_max = 6.66
 color = Color(0.47058824, 0.8, 0.9843137, 1)
 color_ramp = SubResource("GradientTexture1D_5hpmv")
 
 [node name="Node2D" type="Node2D" unique_id=1265591623 node_paths=PackedStringArray("particles", "label", "textureRect")]
 script = ExtResource("1_ifaui")
 sprites = Array[Texture2D]([ExtResource("1_dj2mt"), ExtResource("3_ete6p")])
+smoothPositionSpeed = 0.2
 smoothRotationSpeed = 0.2
 maxRotation = 150.0
 particles = NodePath("GPUParticles2D")
@@ -37,33 +40,33 @@ label = NodePath("Label")
 textureRect = NodePath("Cursor")
 
 [node name="Cursor" type="TextureRect" parent="." unique_id=2129172001]
-offset_left = -163.0
-offset_top = -163.0
-offset_right = 162.0
-offset_bottom = 163.0
+offset_left = -130.659
+offset_top = -50.521
+offset_right = 194.341
+offset_bottom = 275.479
 scale = Vector2(0.16, 0.16)
-pivot_offset_ratio = Vector2(0.5, 0.5)
+pivot_offset_ratio = Vector2(0.402, 0.155)
 mouse_filter = 2
 texture = ExtResource("1_dj2mt")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1236218329]
 show_behind_parent = true
+position = Vector2(5, 18)
 scale = Vector2(0.16, 0.16)
-emitting = false
-amount = 3
-lifetime = 0.2
+amount = 4
+lifetime = 0.53
 process_material = SubResource("ParticleProcessMaterial_ete6p")
 
 [node name="Label" type="Label" parent="." unique_id=1068443150]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -128.0
-offset_top = 20.0
-offset_right = 128.0
-offset_bottom = 32.0
+offset_left = -120.0
+offset_top = 34.0
+offset_right = 136.0
+offset_bottom = 46.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 8
-text = "venorrak"
+text = "Venorrak"
 horizontal_alignment = 1

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://lyuj2fv0g5qm"]
+
+[ext_resource type="Script" uid="uid://dvcliuc5waufv" path="res://examples/physicsDrawing/object.gd" id="1_nbhyf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nbhyf"]
+bounce = 0.16
+
+[node name="object" type="RigidBody2D" unique_id=472316359 node_paths=PackedStringArray("colPolygon", "visPolygon")]
+physics_material_override = SubResource("PhysicsMaterial_nbhyf")
+script = ExtResource("1_nbhyf")
+colPolygon = NodePath("CollisionPolygon2D")
+visPolygon = NodePath("Polygon2D")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=912258918]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=973763191]

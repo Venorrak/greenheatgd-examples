@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bc2mwuglxogkj"]
+
+[ext_resource type="Script" uid="uid://d2o2x3bq5opf1" path="res://addons/GreenHeatGD/GreenHeat.gd" id="1_cggsg"]
+[ext_resource type="Script" uid="uid://bjo8b3i5uag8m" path="res://examples/heatmap/heatmap.gd" id="1_kgk0h"]
+[ext_resource type="Texture2D" uid="uid://cfyh7lyihjxr" path="res://examples/heatmap/lightcast.png" id="2_pn34o"]
+
+[sub_resource type="Gradient" id="Gradient_kgk0h"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_knh2b"]
+gradient = SubResource("Gradient_kgk0h")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pn34o"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.19999999
+scale_max = 0.19999999
+color_ramp = SubResource("GradientTexture1D_knh2b")
+
+[node name="Heatmap" type="Node2D" unique_id=1281316642 node_paths=PackedStringArray("greenHeat", "particles")]
+script = ExtResource("1_kgk0h")
+greenHeat = NodePath("GreenHeat")
+particles = NodePath("GPUParticles2D")
+
+[node name="GreenHeat" type="Node" parent="." unique_id=28467269]
+script = ExtResource("1_cggsg")
+simulating_input = true
+channel_name = "venorrak"
+metadata/_custom_type_script = "uid://d2o2x3bq5opf1"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=591307204]
+modulate = Color(1, 0, 0, 1)
+emitting = false
+amount = 1000
+texture = ExtResource("2_pn34o")
+lifetime = 10.0
+process_material = SubResource("ParticleProcessMaterial_pn34o")

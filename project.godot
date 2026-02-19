@@ -18,3 +18,7 @@ config/icon="res://assets/icon.svg"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/GreenHeatGD/plugin.cfg")
+
+[physics]
+
+2d/physics_engine="GodotPhysics2D"
