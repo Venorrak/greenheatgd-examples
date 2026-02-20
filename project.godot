@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="greenheatgd-examples"
-run/main_scene="uid://bt4j8ys4q7m0l"
 config/features=PackedStringArray("4.6")
 config/icon="res://assets/icon.svg"
 
