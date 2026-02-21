@@ -2,9 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://cscftuvmvmhaf" path="res://examples/drawing/drawing.tscn" id="1_aqi44"]
 [ext_resource type="PackedScene" uid="uid://uoqprplo7rai" path="res://examples/cursors/cursors.tscn" id="1_d2j2t"]
+[ext_resource type="PackedScene" uid="uid://ccjn23fhaxlp8" path="res://examples/draggableElements/draggable.tscn" id="2_oe2cu"]
 
 [node name="Main" type="Node2D" unique_id=364804696]
 
 [node name="drawing" parent="." unique_id=1670835999 instance=ExtResource("1_aqi44")]
+visible = false
+
+[node name="draggable" parent="." unique_id=1614754653 instance=ExtResource("2_oe2cu")]
 
 [node name="cursors" parent="." unique_id=1189497450 instance=ExtResource("1_d2j2t")]

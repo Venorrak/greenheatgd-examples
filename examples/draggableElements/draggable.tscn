@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ccjn23fhaxlp8"]
+
+[ext_resource type="Texture2D" uid="uid://cydclslpuuumg" path="res://assets/icon.svg" id="2_v4na8"]
+[ext_resource type="Script" uid="uid://bxm7gr61auils" path="res://examples/draggableElements/draggableSprite.gd" id="3_ktabx"]
+[ext_resource type="Script" uid="uid://b8i5oa4hjuwyo" path="res://examples/draggableElements/draggableControl.gd" id="5_0m2bt"]
+
+[node name="draggable" type="Node2D" unique_id=1614754653]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1618038305]
+position = Vector2(395, 264)
+texture = ExtResource("2_v4na8")
+script = ExtResource("3_ktabx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=331559332]
+position = Vector2(706, 361)
+texture = ExtResource("2_v4na8")
+script = ExtResource("3_ktabx")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1684909658]
+offset_left = 132.0
+offset_top = 65.0
+offset_right = 336.0
+offset_bottom = 139.0
+script = ExtResource("5_0m2bt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1619909516]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/VBoxContainer" unique_id=428983119]
+custom_minimum_size = Vector2(89.929, 39.376)
+layout_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer" unique_id=531164955]
+layout_mode = 2
+text = "you can press this button"

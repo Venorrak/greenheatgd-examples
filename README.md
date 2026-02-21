@@ -23,5 +23,9 @@ The heat map example shows you how to create a "heat map" of where the viewers a
 The physics shows how you can turn the viewer's drawing into real 2D physics objects that can interact with each other. (I know this physics looks weird and I don't know why 🤷)
 ![physicsDemo](media/physics.gif)
 
+## Draggable Objects
+The draggable objects example shows how you can make objects that viewers can drag around the screen.
+![draggableDemo](media/draggable.gif)
+
 # Propositions
 I am welcome to any propositions of new examples or improvements to the existing ones. You can contact me on Bluesky at [@venorrak.dev](https://bsky.app/profile/venorrak.dev) or open an issue in this repository.
